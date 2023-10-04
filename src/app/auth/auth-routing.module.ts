@@ -1,7 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { LoginComponent } from './login/login.component';
+import { RecoverPasswordComponent } from './recover-password/recover-password.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {path: 'authentication/login', component: LoginComponent},
+  {path: 'authentication/RecuperacionDePassword', component: RecoverPasswordComponent}
+];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
