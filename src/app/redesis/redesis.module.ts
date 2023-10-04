@@ -26,7 +26,8 @@ import { RedesisComponent } from './redesis.component';
   ],
   imports: [
     CommonModule,
-    RedesisRoutingModule
+    RedesisRoutingModule,
+    
   ]
 })
 export class RedesisModule { }

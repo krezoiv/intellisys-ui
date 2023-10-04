@@ -16,6 +16,7 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { SharedModule } from './shared/shared.module';
 
 
 
@@ -25,6 +26,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 
   ],
   imports: [
+    SharedModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
