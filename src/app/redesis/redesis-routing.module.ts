@@ -16,25 +16,17 @@ import { RedesisComponent } from './redesis.component';
 // Definir las rutas para la funcionalidad de Redesis
 const routes: Routes = [
   {
-    path: 'Compras', // Ruta principal para Redesis
-    component: RedesisComponent, // Componente principal para Redesis
-    canActivate: [AuthGuard], // Guardia de autenticación para proteger las rutas
+    path: 'redesis-purchases',
     children: [
-      // Rutas secundarias para compras de Redesis
-      //{ path: '', component: RedesisComponent }, // Ruta por defecto
-      { path: 'NuevaCompra', component: RedesisNewPurchaseComponent }, // Ruta para crear una nueva compra
-      { path: 'EditarCompra', component: RedesisEditPurchaseComponent }, // Ruta para editar una compra existente
+      { path: 'edit/:id', component: RedesisEditPurchaseComponent },
+      { path: 'new', component: RedesisNewPurchaseComponent },
     ],
   },
   {
-    path: 'Ventas', // Ruta principal para Redesis (se repite)
-    component: RedesisComponent, // Componente principal para Redesis (se repite)
-    canActivate: [AuthGuard], // Guardia de autenticación para proteger las rutas (se repite)
+    path: 'redesis-sales',
     children: [
-      // Rutas secundarias para ventas de Redesis
-      { path: '', component: RedesisComponent }, // Ruta por defecto (se repite)
-      { path: 'NuevaVenta', component: RedesisNewSaleComponent }, // Ruta para crear una nueva venta
-      { path: 'EditarVenta', component: RedesisEditSaleComponent }, // Ruta para editar una venta existente
+      { path: 'edit/:id', component: RedesisEditSaleComponent },
+      { path: 'new', component: RedesisNewSaleComponent },
     ],
   },
 ];

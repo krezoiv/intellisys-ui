@@ -8,19 +8,17 @@ import { AuthGuard } from '../guards/auth.guard';
 
 const routes: Routes = [
   {
-    path: 'Compras',
-    canActivate:[AuthGuard],
-    children:[
-      {path: 'RetelecomNuevaCompra', component: RetelecomNewPurchaseComponent},
-      {path: 'RetelecomEditarCompra', component: RetelecomEditPurchaseComponent},
+    path: 'Retelecom-Compras',
+    children: [
+      { path: 'EditarCompra', component: RetelecomEditPurchaseComponent },
+      { path: 'NuevaCompra', component: RetelecomNewPurchaseComponent },
     ],
   },
   {
-    path: 'Ventas',
-    canActivate:[AuthGuard],
-    children:[
-      {path: 'RetelecomNuevaVenta', component: RetelecomNewSaleComponent },
-      {path: 'RetelecomEditarVenta', component: RetelecomEditSaleComponent}
+    path: 'retelecom-ventas',
+    children: [
+      { path: 'editar', component: RetelecomEditSaleComponent },
+      { path: 'nueva', component: RetelecomNewSaleComponent },
     ],
   },
 ];

@@ -4,8 +4,8 @@ import { LoginComponent } from './login/login.component';
 import { RecoverPasswordComponent } from './recover-password/recover-password.component';
 
 const routes: Routes = [
-  {path: 'authentication/login', component: LoginComponent},
-  {path: 'authentication/RecuperacionDePassword', component: RecoverPasswordComponent}
+  {path: 'authentication/login', component: LoginComponent}, // Ruta principal
+  { path: 'recover-password', component: RecoverPasswordComponent },
 ];
 
 @NgModule({
