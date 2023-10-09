@@ -5,6 +5,7 @@ import { MainHeaderComponent } from './main-header/main-header.component';
 import { FooterComponent } from './footer/footer.component';
 import { RouterModule } from '@angular/router';
 import { HeaderRetelecomComponent } from './header-retelecom/header-retelecom.component';
+import { HeaderAdministrationComponent } from './header-administration/header-administration.component';
 
 
 
@@ -13,13 +14,15 @@ import { HeaderRetelecomComponent } from './header-retelecom/header-retelecom.co
     MainSidebarComponent,
     MainHeaderComponent,
     FooterComponent,
-    HeaderRetelecomComponent
+    HeaderRetelecomComponent,
+    HeaderAdministrationComponent
   ],
   exports:[
     MainSidebarComponent,
     MainHeaderComponent,
     FooterComponent, 
-    HeaderRetelecomComponent
+    HeaderRetelecomComponent,
+    HeaderAdministrationComponent
   ],
   imports: [
     CommonModule,
