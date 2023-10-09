@@ -1,1 +1,91 @@
-<p>retelecom-new-purchase works!</p>
+<div class="employee-form">
+    <form [formGroup]="employeeForm">
+      <h2>Registro de Empleado</h2>
+      
+      <mat-form-field class="full-width">
+        <input matInput formControlName="codigo" placeholder="Código" required>
+      </mat-form-field>
+      
+      <mat-form-field class="full-width">
+        <input matInput formControlName="primerNombre" placeholder="Primer Nombre" required>
+      </mat-form-field>
+      
+      <mat-form-field class="full-width">
+        <input matInput formControlName="segundoNombre" placeholder="Segundo Nombre">
+      </mat-form-field>
+      
+      <mat-form-field class="full-width">
+        <input matInput formControlName="primerApellido" placeholder="Primer Apellido" required>
+      </mat-form-field>
+      
+      <mat-form-field class="full-width">
+        <input matInput formControlName="segundoApellido" placeholder="Segundo Apellido">
+      </mat-form-field>
+      
+      <mat-form-field class="full-width">
+        <input matInput [matDatepicker]="fechaAltaPicker" formControlName="fechaAlta" placeholder="Fecha de Alta" required>
+        <mat-datepicker-toggle matSuffix [for]="fechaAltaPicker"></mat-datepicker-toggle>
+        <mat-datepicker #fechaAltaPicker></mat-datepicker>
+      </mat-form-field>
+      
+      <mat-form-field class="full-width">
+        <input matInput [matDatepicker]="fechaBajaPicker" formControlName="fechaBaja" placeholder="Fecha de Baja">
+        <mat-datepicker-toggle matSuffix [for]="fechaBajaPicker"></mat-datepicker-toggle>
+        <mat-datepicker #fechaBajaPicker></mat-datepicker>
+      </mat-form-field>
+      
+      <mat-form-field class="full-width">
+        <mat-select formControlName="sede" placeholder="Sede">
+          <mat-option value="sede1">Sede 1</mat-option>
+          <mat-option value="sede2">Sede 2</mat-option>
+        </mat-select>
+      </mat-form-field>
+      
+      <mat-form-field class="full-width">
+        <mat-select formControlName="tipoEmpleado" placeholder="Tipo de Empleado">
+          <mat-option value="tipo1">Tipo 1</mat-option>
+          <mat-option value="tipo2">Tipo 2</mat-option>
+        </mat-select>
+      </mat-form-field>
+      
+      <mat-form-field class="full-width">
+        <input matInput formControlName="status" placeholder="Status">
+      </mat-form-field>
+      
+      <mat-form-field class="full-width">
+        <mat-select formControlName="cargo" placeholder="Cargo">
+          <mat-option value="cargo1">Cargo 1</mat-option>
+          <mat-option value="cargo2">Cargo 2</mat-option>
+        </mat-select>
+      </mat-form-field>
+      
+      <mat-form-field class="full-width">
+        <mat-select formControlName="departamento" placeholder="Departamento">
+          <mat-option value="depto1">Departamento 1</mat-option>
+          <mat-option value="depto2">Departamento 2</mat-option>
+        </mat-select>
+      </mat-form-field>
+      
+      <mat-form-field class="full-width">
+        <mat-select formControlName="municipio" placeholder="Municipio">
+          <mat-option value="municipio1">Municipio 1</mat-option>
+          <mat-option value="municipio2">Municipio 2</mat-option>
+        </mat-select>
+      </mat-form-field>
+      
+      <mat-form-field class="full-width">
+        <input matInput formControlName="referenciaDireccion" placeholder="Referencia de Dirección">
+      </mat-form-field>
+      
+      <mat-form-field class="full-width">
+        <input matInput formControlName="cuentaBanco1" placeholder="Cuenta Banco 1">
+      </mat-form-field>
+      
+      <mat-form-field class="full-width">
+        <input matInput formControlName="cuentaBanco2" placeholder="Cuenta Banco 2">
+      </mat-form-field>
+      
+      <button mat-raised-button color="primary" type="submit">Registrar</button>
+    </form>
+  </div>
+  

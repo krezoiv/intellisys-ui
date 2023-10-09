@@ -13,6 +13,12 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatSelectModule } from '@angular/material/select';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatInputModule } from '@angular/material/input';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -31,8 +37,15 @@ import { MatMenuModule } from '@angular/material/menu';
     MatIconModule,
     BrowserAnimationsModule, // Agrega BrowserAnimationsModule
     MatMenuModule, // Agrega MatMenuModule
-  
+    ReactiveFormsModule,
+    MatInputModule,
+    MatDatepickerModule,
+    MatSelectModule,
+    MatNativeDateModule,
+    MatFormFieldModule,
     SharedModule
   ]
+  
+   
 })
 export class RetelecomModule { }
