@@ -5,20 +5,17 @@ import { RetelecomEditPurchaseComponent } from './retelecom-purchases/retelecom-
 import { RetelecomNewSaleComponent } from './retelecom-sales/retelecom-new-sale/retelecom-new-sale.component';
 import { RetelecomEditSaleComponent } from './retelecom-sales/retelecom-edit-sale/retelecom-edit-sale.component';
 import { AuthGuard } from '../guards/auth.guard';
+import { RetelecomComponent } from './retelecom.component';
 
 const routes: Routes = [
   {
-    path: 'Retelecom-Compras',
+    path: 'retelecom',
+    component: RetelecomComponent,
     children: [
-      { path: 'EditarCompra', component: RetelecomEditPurchaseComponent },
-      { path: 'NuevaCompra', component: RetelecomNewPurchaseComponent },
-    ],
-  },
-  {
-    path: 'retelecom-ventas',
-    children: [
-      { path: 'editar', component: RetelecomEditSaleComponent },
-      { path: 'nueva', component: RetelecomNewSaleComponent },
+      { path: 'Compras/EditarCompra', component: RetelecomEditPurchaseComponent },
+      { path: 'Compras/NuevaCompra', component: RetelecomNewPurchaseComponent },
+      { path: 'EditarVenta', component: RetelecomEditSaleComponent },
+      { path: 'NuevaVenta', component: RetelecomNewSaleComponent },
     ],
   },
 ];

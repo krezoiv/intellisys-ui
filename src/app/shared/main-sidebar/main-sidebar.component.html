@@ -1,52 +1,38 @@
- <!-- Left Sidebar - style you can find in sidebar.scss  -->
-        <!-- ============================================================== -->
-        <aside class="left-sidebar">
-            <!-- Sidebar scroll-->
-            <div class="scroll-sidebar">
-                <!-- Sidebar navigation-->
-                <nav class="sidebar-nav">
-                    <ul id="sidebarnav">
-                        <li class="user-profile">
-                            <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><img src="./assets/images/users/profile.png" alt="user" /><span class="hide-menu">Steave Jobs </span></a>
-                            <ul aria-expanded="false" class="collapse">
-                                <li><a href="javascript:void()">My Profile </a></li>
-                                <li><a href="javascript:void()">My Balance</a></li>
-                                <li><a href="javascript:void()">Inbox</a></li>
-                                <li><a href="javascript:void()">Account Setting</a></li>
-                                <li><a href="javascript:void()">Logout</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-devider"></li>
-                        <li class="nav-small-cap">PERSONAL</li>
-
-                        <!--Retelecom-->
-                        <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-gauge"></i><span class="hide-menu">Retelecom</span></a>
-                            <ul aria-expanded="false" class="collapse">
-                                <li><a href="index.html">Compras </a></li>
-                                <li><a href="index2.html">Ventas</a></li>
-                                <li><a href="index3.html">Demographical</a></li>
-                                <li><a href="index4.html">Modern</a></li>
-                            </ul>
-                        </li>
-
-                        <!--Redesis-->
-                        <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-gauge"></i><span class="hide-menu">Redesis</span></a>
-                            <ul aria-expanded="false" class="collapse">
-                                <li><a href="index.html">Comrpas </a></li>
-                                <li><a href="index2.html">Ventas</a></li>
-                                <li><a href="index3.html">Demographical</a></li>
-                                <li><a href="index4.html">Modern</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
-                <!-- End Sidebar navigation -->
-            </div>
-            <!-- End Sidebar scroll-->
-        </aside>
-        <!-- ============================================================== -->
-        <!-- End Left Sidebar - style you can find in sidebar.scss  -->
-        <!-- ============================================================== -->
-        <!-- ============================================================== -->
-        <!-- Page wrapper  -->
-        <!-- ============================================================== -->
+<aside class="left-sidebar">
+    <div class="scroll-sidebar">
+        <nav class="sidebar-nav">
+            <ul>
+                <li>
+                    <a routerLink="/retelecom">
+                        <i class="fa fa-home fa-2x"></i>
+                        <span class="nav-text">Retelecom</span>
+                    </a>
+                </li>
+                <li class="has-subnav">
+                    <a routerLink="/redesis">
+                        <i class="fa fa-globe fa-2x"></i>
+                        <span class="nav-text">Redesis</span>
+                    </a>
+                </li>
+                <li class="has-subnav">
+                    <a routerLink="/administracionn">
+                        <i class="fa fa-comments fa-2x"></i>
+                        <span class="nav-text">Administracion</span>
+                    </a>
+                </li>
+                <!-- Agrega más enlaces aquí -->
+            </ul>
+            <ul class="logout">
+                <li>
+                    <a routerLink="/logout">
+                        <i class="fa fa-power-off fa-2x"></i>
+                        <span class="nav-text">Logout</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</aside>
+<div>
+    <router-outlet></router-outlet>
+</div>

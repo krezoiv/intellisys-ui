@@ -7,6 +7,12 @@ import { RetelecomEditPurchaseComponent } from './retelecom-purchases/retelecom-
 import { RetelecomNewPurchaseComponent } from './retelecom-purchases/retelecom-new-purchase/retelecom-new-purchase.component';
 import { RetelecomNewSaleComponent } from './retelecom-sales/retelecom-new-sale/retelecom-new-sale.component';
 import { RetelecomEditSaleComponent } from './retelecom-sales/retelecom-edit-sale/retelecom-edit-sale.component';
+import { SharedModule } from '../shared/shared.module';
+import { DashboardRetelecomComponent } from './dashboard-retelecom/dashboard-retelecom.component';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatMenuModule } from '@angular/material/menu';
 
 
 @NgModule({
@@ -15,11 +21,18 @@ import { RetelecomEditSaleComponent } from './retelecom-sales/retelecom-edit-sal
     RetelecomEditPurchaseComponent,
     RetelecomNewPurchaseComponent,
     RetelecomNewSaleComponent,
-    RetelecomEditSaleComponent
+    RetelecomEditSaleComponent,
+    DashboardRetelecomComponent
   ],
   imports: [
     CommonModule,
-    RetelecomRoutingModule
+    RetelecomRoutingModule,
+    MatToolbarModule,
+    MatIconModule,
+    BrowserAnimationsModule, // Agrega BrowserAnimationsModule
+    MatMenuModule, // Agrega MatMenuModule
+  
+    SharedModule
   ]
 })
 export class RetelecomModule { }

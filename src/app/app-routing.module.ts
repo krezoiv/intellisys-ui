@@ -6,20 +6,10 @@ import { HomeRoutingModule } from './home/home-routing.module';
 import { RedesisRoutingModule } from './redesis/redesis-routing.module';
 import { RetelecomRoutingModule } from './retelecom/retelecom-routing.module';
 import { AdministrationRoutingModule } from './administration/administration-routing.module';
+import { AuthGuard } from './guards/auth.guard';
 
 
-/*
-// Definir las rutas de la aplicación
-const routes: Routes = [
-  { path: '', loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule) },
-  {path: 'auth', loadChildren: () => import('./auth/auth.module').then((auth) => auth.AuthModule)},
-  { path: 'administration', loadChildren: () => import('./administration/administration.module').then(m => m.AdministrationModule) },
-  { path: 'home', loadChildren: () => import('./home/home.module').then(m => m.HomeModule) },
-  { path: 'redesis', loadChildren: () => import('./redesis/redesis.module').then(m => m.RedesisModule) },
-  { path: 'retelecom', loadChildren: () => import('./retelecom/retelecom.module').then(m => m.RetelecomModule) },
-  { path: '**', redirectTo: '' }, // Redirige a la página de inicio
-];
-*/
+
 const routes: Routes = [
   // Ruta por defecto que redirige a la página de inicio de sesión
   { path: '', redirectTo: 'auth/authentication/login', pathMatch: 'full' },
@@ -36,7 +26,7 @@ const routes: Routes = [
   {
     path: 'retelecom',
     loadChildren: () =>
-      import('./retelecom/retelecom.module').then((retelecom) => retelecom.RetelecomModule),
+      import('./retelecom/retelecom.module').then((retelecom) => retelecom.RetelecomModule), canActivate:[AuthGuard]
   },
   {
     path: 'redesis',

@@ -1,0 +1,14 @@
+.navbar {
+    height: 40px; /* Ajusta la altura según tus preferencias */
+  }
+  
+  .navbar-dark .navbar-nav .nav-link {
+    font-size: 20px; /* Ajusta el tamaño de la fuente según tus preferencias */
+    padding: 5px 5px; /* Ajusta el espaciado interno según tus preferencias (arriba/abajo, izquierda/derecha) */
+  }
+  
+  /* Opcional: Ajustar el tamaño del icono */
+  .navbar-dark .navbar-nav .nav-link i {
+    font-size: 20px; /* Ajusta el tamaño del icono según tus preferencias */
+  }
+  

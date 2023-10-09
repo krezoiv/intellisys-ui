@@ -14,6 +14,9 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
+import { MatIconModule } from '@angular/material/icon';
+import { MatMenuModule } from '@angular/material/menu'; // Importa MatMenuModule
+
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { SharedModule } from './shared/shared.module';
@@ -43,6 +46,9 @@ import { SharedModule } from './shared/shared.module';
     MatNativeDateModule,
     BrowserAnimationsModule,
     MatToolbarModule,
+    MatIconModule,
+    BrowserAnimationsModule, // Agrega BrowserAnimationsModule
+    MatMenuModule, // Agrega MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]

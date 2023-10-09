@@ -16,10 +16,10 @@ import { RedesisComponent } from './redesis.component';
 // Definir las rutas para la funcionalidad de Redesis
 const routes: Routes = [
   {
-    path: 'redesis-purchases',
+    path: 'redesis', component: RedesisComponent,
     children: [
-      { path: 'edit/:id', component: RedesisEditPurchaseComponent },
-      { path: 'new', component: RedesisNewPurchaseComponent },
+      { path: 'Compras/EditarCompra', component: RedesisEditPurchaseComponent },
+      { path: 'Compras/NuevaCompra', component: RedesisNewPurchaseComponent },
     ],
   },
   {

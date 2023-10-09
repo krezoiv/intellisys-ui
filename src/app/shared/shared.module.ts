@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { MainSidebarComponent } from './main-sidebar/main-sidebar.component';
 import { MainHeaderComponent } from './main-header/main-header.component';
 import { FooterComponent } from './footer/footer.component';
+import { RouterModule } from '@angular/router';
+import { HeaderRetelecomComponent } from './header-retelecom/header-retelecom.component';
 
 
 
@@ -10,15 +12,19 @@ import { FooterComponent } from './footer/footer.component';
   declarations: [
     MainSidebarComponent,
     MainHeaderComponent,
-    FooterComponent
+    FooterComponent,
+    HeaderRetelecomComponent
   ],
   exports:[
     MainSidebarComponent,
     MainHeaderComponent,
-    FooterComponent
+    FooterComponent, 
+    HeaderRetelecomComponent
   ],
   imports: [
     CommonModule,
+    RouterModule
+
   
   ]
 })

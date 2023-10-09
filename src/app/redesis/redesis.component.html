@@ -1,1 +1,29 @@
-<p>REDESIS!</p>
+<div id="main-wrapper">
+
+    <app-main-header></app-main-header>
+ 
+    <app-main-sidebar></app-main-sidebar>
+ 
+    <div class="page-wrapper">
+       <div class="container-fluid">
+          <!-- Sistemas de rutas-->
+           <!-- ============================================================== -->
+                 <!-- Start Page Content -->
+                 <!-- ============================================================== -->
+                 <div class="row">
+                   <div class="col-12">
+                       <div class="card">
+                           <div class="card-body">
+                           <router-outlet></router-outlet>
+                              
+                           </div>
+                       </div>
+                   </div>
+               </div>
+               <!-- ============================================================== -->
+               <!-- End PAge Content -->
+               <app-footer></app-footer>
+       </div>
+ 
+    </div>
+ </div>
